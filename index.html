@@ -4,9 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Document</title>
   </head>
   <body>
+    <section>
+      <h1>Agregar Productos</h1>
+      <form id="form" class="formProductos">
+        <label>
+          ID
+          <input min="0" required name="id" id="id" type="number" />
+        </label>
+        <label>
+          Nombre / Titulo
+          <input placeholder="Nike Air Max 1..." required name="title" id="name" type="text" />
+        </label>
+        <label>
+          Stock
+          <input min="1" required name="stock" id="stock" type="number" />
+        </label>
+        <label>
+          Precio
+          <input placeholder="1200" required name="price" id="price" type="number" />
+        </label>
+        <label>
+          Descripción
+          <textarea required name="description" id="description" cols="30" rows="5"></textarea>
+        </label>
+        <button>Cargar</button>
+      </form>
+    </section>
+    <section>
+      <h1>Listado de Productos</h1>
+      <table>
+        <tr>
+          <thead>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Stock</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+          </thead>
+          <tbody id="productos"></tbody>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h1>Eliminar Producto</h1>
+      <form id="deleteForm" action="" class="formDelete">
+        <label for="">
+          Ingrese ID:
+          <input min="0" id="deleteID" type="number" />
+        </label>
+        <button>Eliminar</button>
+      </form>
+    </section>
+    <section>
+      <h1>Modificar Stock</h1>
+      <form id="modifyForm" action="" class="formDelete">
+        <label for="">
+          Ingrese ID:
+          <input min="0" id="modifyID" type="number" />
+        </label>
+        <button>Eliminar</button>
+      </form>
+    </section>
     <script src="./main.js"></script>
   </body>
 </html>
